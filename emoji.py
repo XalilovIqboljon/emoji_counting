@@ -13,11 +13,17 @@ data=getUpdates()
 dislike='👎'
 like='👍🏽'
 dict1={}
-
+a=0
+b=0
 for i in data:
     message=i['message']
     text=message['text']
     if text==like:
-        print(like)
+        a+=1
+        dict1['like']=a
     if text==dislike:
-        print(dislike)
+        b+=1
+        dict1['dislike']=b
+
+
+print(dict1)
